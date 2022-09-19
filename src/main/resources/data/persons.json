@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "first": "Maddison",
+      "last": "Alexander",
+      "nat": "GB"
+    },
+    {
+      "id": 2,
+      "first": "Nick",
+      "last": "Watts",
+      "nat": "GB"
+    },
+    {
+      "id": 3,
+      "first": "Clayton",
+      "last": "Hart",
+      "nat": "GB"
+    },
+    {
+      "id": 4,
+      "first": "Olivia",
+      "last": "Gonzalez",
+      "nat": "GB"
+    },
+    {
+      "id": 5,
+      "first": "Jason",
+      "last": "Walters",
+      "nat": "GB"
+    },
+    {
+      "id": 6,
+      "first": "Brent",
+      "last": "Mccoy",
+      "nat": "US"
+    },
+    {
+      "id": 7,
+      "first": "Arthur",
+      "last": "Little",
+      "nat": "US"
+    },
+    {
+      "id": 8,
+      "first": "Edna",
+      "last": "Rodriquez",
+      "nat": "US"
+    },
+    {
+      "id": 9,
+      "first": "Miriam",
+      "last": "Castillo",
+      "nat": "US"
+    },
+    {
+      "id": 10,
+      "first": "Gary",
+      "last": "Hoffman",
+      "nat": "US"
+    }
+  ]
+}
