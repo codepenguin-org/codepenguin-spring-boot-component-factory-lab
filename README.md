@@ -9,3 +9,6 @@ call:
 curl --location --request GET 'https://randomuser.me/api/?results=10&nat=us,gb&inc=name,nat'
 ```
 
+# Heroku Deployment
+
+https://codepenguin-factory-lab.herokuapp.com/swagger-ui/index.html
