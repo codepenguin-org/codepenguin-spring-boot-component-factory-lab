@@ -25,6 +25,12 @@
 
 package org.codepenguin.labs.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.codepenguin.labs.enums.Country;
 import org.codepenguin.labs.entity.Person;
 import org.codepenguin.labs.service.PersonServiceFactory;
@@ -66,8 +72,18 @@ public class PersonController {
      * @return an HTTP 200 response with the found person and its data according to the country or an HTTP 404 response
      * if not found.
      */
+    @Operation(summary = "Finds a person data by country and id.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Found the person.",
+                    content = {
+                            @Content(mediaType = "application/json", schema = @Schema(implementation = Person.class))
+                    }
+            ),
+            @ApiResponse(responseCode = "404", description = "Person not found.", content = @Content)
+    })
     @GetMapping("/{country}/{id}")
-    public ResponseEntity<Person> find(@PathVariable final Country country, final @PathVariable Long id) {
+    public ResponseEntity<Person> find(@Parameter(description = "the country") @PathVariable final Country country,
+                                       @Parameter(description = "the id") final @PathVariable Long id) {
         final var response = personServiceFactory.get(country).find(id);
         return response.isEmpty() ? ResponseEntity.notFound().build() : ResponseEntity.ok(response.get());
 
