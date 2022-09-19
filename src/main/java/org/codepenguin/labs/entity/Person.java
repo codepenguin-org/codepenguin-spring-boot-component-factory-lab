@@ -25,6 +25,7 @@
 
 package org.codepenguin.labs.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import org.codepenguin.labs.enums.Country;
 
@@ -35,16 +36,29 @@ import org.codepenguin.labs.enums.Country;
  * @version 1.0.0
  * @since 17
  */
+@Schema(description = "Person.")
 @Data
 public final class Person {
 
+    @Schema(description = "the id.")
     private Long id;
+
+    @Schema(description = "the first name.")
     private String firstName;
+
+    @Schema(description = "the last name.")
     private String lastName;
+
+    @Schema(description = "the country.")
     private Country country;
+
+    @Schema(description = "the USD expenses.")
     private Double expenses;
 
+    @Schema(description = "the VIP status.")
     private Boolean vip;
+
+    @Schema(description = "the land area in m2.")
     private Double landArea;
 
     /**

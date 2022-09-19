@@ -25,21 +25,26 @@
 
 package org.codepenguin.labs.enums;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 /**
- * Countries.
+ * Supported countries.
  *
  * @author Jorge Garcia
  * @version 1.0.0
  * @since 17
  */
+@Schema(description = "Supported countries.")
 public enum Country {
 
     /**
      * United States.
      */
+    @Schema(description = "United States")
     US,
     /**
      * Great Britain.
      */
+    @Schema(description = "Great Britain")
     GB
 }
